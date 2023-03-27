@@ -27,3 +27,15 @@ model_sentence = nlp(sentence_to_compare)
 for sentence in sentences:
     similarity = nlp(sentence).similarity(model_sentence)
     print(sentence + " - ", similarity)
+
+
+#********* NOTES **********#
+# I see that the model is able to identify words that refer to similar entities. Cat and Apple have a similarity of
+# approximately 0.6 because they are both animals. Apple and banana have a similarity of approximately 0.7 because 
+# they are both fruits. However, objects of different entities have a low similarity e.g apple and monkey
+# More examples could be the comparison of airport, football and stadium. Airport and stadium will have a higher
+# similarity as they are both facilities whereas airport and football will have have a low similarity as they are
+# different entitities. Football and stadium are different entities but the similarity could be significant as they are
+# somewhat related.
+
+# When the file is run with the simpler en_core_web_sm
