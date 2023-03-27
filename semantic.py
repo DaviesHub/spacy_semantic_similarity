@@ -1,5 +1,5 @@
 import spacy  # importing spacy
-nlp = spacy.load('en_core_web_sm') # specifying the model we want to use. 
+nlp = spacy.load('en_core_web_md') # specifying the model we want to use. 
 
 word1 = nlp("cat")
 word2 = nlp("monkey")
