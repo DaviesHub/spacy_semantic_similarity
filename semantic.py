@@ -1,5 +1,5 @@
 import spacy  # importing spacy
-nlp = spacy.load('en_core_web_md') # specifying the model we want to use. 
+nlp = spacy.load('en_core_web_sm') # specifying the model we want to use. 
 
 word1 = nlp("cat")
 word2 = nlp("monkey")
@@ -38,4 +38,6 @@ for sentence in sentences:
 # different entitities. Football and stadium are different entities but the similarity could be significant as they are
 # somewhat related.
 
-# When the file is run with the simpler en_core_web_sm
+# When the file is run with the simpler en_core_web_sm, the word and sentence similarities produced makes no sense.
+# For example, it gives monkey and banana a similarity of 0.4, and apple and monkey a similarity of 0.7. According to
+# the user warning, this is because the model does not use preloaded word vectors.
